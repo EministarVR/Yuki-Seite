@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Erfahre mehr über YukiCraft, unseren Minecraft-Server mit CityBuild, SMP, Minigames und einer japanisch inspirierten Community, die Kreativität und Abenteuer vereint.">
+<meta name="keywords" content="YukiCraft, Über uns, Minecraft Server, Community, Japan, CityBuild, SMP, Minigames, YukiCraft Über uns, YukiCraft Informationen, YukiCraft Team, Minecraft Japan Server, Minecraft Gemeinschaft, Minecraft Abenteuer, YukiCraft Server Informationen, YukiCraft Server Community, Japan Minecraft, Minecraft Server CityBuild, Minecraft Server SMP, Minecraft Server Minigames">
+<meta name="author" content="YukiCraft Team">
+<meta property="og:title" content="Über uns - YukiCraft">
+<meta property="og:description" content="Tauche ein in die Welt von YukiCraft! Erfahre, was unseren Minecraft-Server so besonders macht und entdecke unsere japanisch inspirierte Community.">
+<meta property="og:image" content="path-to-your-image.jpg">
+<meta property="og:url" content="https://yukicraft.net/ueber-uns">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Über uns - YukiCraft">
+<meta name="twitter:description" content="Erfahre mehr über YukiCraft, einen Minecraft-Server, der CityBuild, SMP, Minigames und eine japanisch inspirierte Community bietet.">
+<meta name="twitter:image" content="path-to-your-image.jpg">
+
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <title>YukiCraft - Über uns</title>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- ScrollReveal.js für Animationen -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        :root {
+            --main-color: #FF6F61;
+            --secondary-color: #F5F5F5;
+            --accent-color: #F6A800;
+            --background-color: #121212;
+            --text-color: #fff;
+            --transition-time: 0.6s;
+            --box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            scroll-behavior: smooth;
+        }
+
+        /* Fixe Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 100;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--box-shadow);
+            transition: background-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        nav a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color var(--transition-time), transform var(--transition-time);
+        }
+
+        nav a:hover {
+            color: var(--main-color);
+            transform: scale(1.1);
+        }
+
+        nav .menu-icon {
+            display: none;
+            font-size: 2rem;
+            color: var(--accent-color);
+            cursor: pointer;
+        }
+
+        /* Partikel-Effekte */
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        section {
+            padding: 80px 0; /* Sektionen näher zusammenrücken */
+            text-align: center;
+            height: auto; /* Höhe für flexible Sektionen */
+            position: relative;
+        }
+
+        section h2 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--main-color);
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        section p {
+            font-size: 1.3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--text-color);
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s 0.5s ease-out forwards;
+        }
+
+        .team-member p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+        section .button {
+            background-color: transparent;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            padding: 1rem 3rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s 1s ease-out forwards;
+        }
+
+        section .button:hover {
+            background-color: var(--accent-color);
+            color: var(--background-color);
+        }
+
+        section .button:active {
+            background-color: var(--main-color);
+            color: white;
+        }
+
+        /* Logo Unendlicher Zoom */
+        .logo {
+            width: 200px;
+            height: auto;
+            animation: smoothZoom 3s infinite linear;
+            margin-top: 40px;
+        }
+
+        @keyframes smoothZoom {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+        }
+
+        /* Parallax Effekt */
+        .parallax {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('banner.webp');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        /* Scroll Animation */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Galerie */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 128px;
+            height: 256px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery img:active {
+            transform: scale(0.95);
+        }
+
+        /* Discord Online API Bereich */
+        .discord-status {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 40px;
+            color: var(--text-color);
+        }
+
+        .discord-status img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .discord-status .status-info {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+
+        /* Mobile Optimierung */
+        @media only screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem;
+            }
+
+            nav a {
+                margin: 8px 0;
+                display: none;
+                font-size: 1rem;
+            }
+
+            nav .menu-icon {
+                display: block;
+            }
+
+            nav.open a {
+                display: block;
+            }
+
+            section h2 {
+                font-size: 2.2rem;
+            }
+
+            section p {
+                font-size: 1.1rem;
+            }
+
+            .button {
+                font-size: 1.1rem;
+                padding: 0.8rem 2.5rem;
+            }
+
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Particles -->
+    <div id="particles-js"></div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#features">Features</a>
+        <a href="#about">Über uns</a>
+        <a href="#contact">Kontakt</a>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+
+    <section id="home">
+        <div class="parallax"></div>
+        <img src="logo.webp" alt="YukiCraft Logo" class="logo">
+        <h2>YukiCraft - Über uns</h2>
+        <p>YukiCraft ist mehr als nur ein Minecraft-Server – es ist eine Community, die Wert auf Kreativität, Zusammenarbeit und ein einzigartiges Spielerlebnis legt, inspiriert von der japanischen Kultur.</p>
+        <button class="button" onclick="copyIP()">Jetzt Spielen</button>
+    </section>
+    
+    <!-- Popup für Erfolgreiche Kopie -->
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>IP erfolgreich kopiert!</p>
+            <button class="popup-close" onclick="closePopup()">Schließen</button>
+        </div>
+    </div>
+    <style>
+        /* Popup Style */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 200;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .popup-content {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            animation: fadeInPopup 0.5s ease-in-out;
+        }
+    
+        .popup-content p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+    
+        .popup-close {
+            background-color: var(--main-color);
+            color: var(--background-color);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+    
+        .popup-close:hover {
+            background-color: var(--accent-color);
+        }
+    
+        @keyframes fadeInPopup {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+    
+    
+   
+    
+    <section id="about">
+        <h2>Über YukiCraft</h2>
+        <p>YukiCraft ist nicht nur ein Minecraft-Server – es ist ein Symbol für Hoffnung, Zusammenhalt und die Kraft, aus schweren Zeiten etwas Wundervolles zu erschaffen. Wir sind eine kleine Gruppe von Schülern, die Minecraft nicht nur als Spiel sehen, sondern als einen Ort, an dem Träume wahr werden und Freundschaften entstehen können. Doch unsere Reise hierher war alles andere als einfach.</p>
+    
+        <p>Früher waren wir Teil einer anderen Minecraft-Community, voller Enthusiasmus und Ideen, bereit, unseren Platz zu finden und mit anderen Spielern großartige Abenteuer zu erleben. Doch anstatt willkommen geheißen zu werden, fühlten wir uns oft übersehen und nicht ernst genommen. Unsere Meinungen wurden ignoriert, unsere Vorschläge belächelt, und oft blieb nur das Gefühl, dass wir nicht dazugehören. Was einst Spaß und Freude brachte, wurde für uns zu einer Quelle von Frust und Enttäuschung.</p>
+    
+        <p>Es gab Tage, an denen wir darüber nachdachten, alles aufzugeben. Tage, an denen wir uns fragten, ob es überhaupt einen Ort gibt, an dem wir wirklich wir selbst sein können – ohne Angst davor, wie wir behandelt werden. Doch in diesen schwierigen Momenten haben wir gelernt, wie stark unsere Freundschaft und unser Zusammenhalt wirklich sind. Statt aufzugeben, beschlossen wir, etwas Neues zu schaffen. Etwas Eigenes. Einen Ort, der uns und anderen zeigt, dass es auch anders geht.</p>
+    
+        <p>So wurde YukiCraft geboren – aus den Scherben alter Enttäuschungen entstand ein Traum, der heller leuchtet als alles, was wir uns zuvor vorgestellt haben. YukiCraft ist mehr als ein Server. Es ist ein Zuhause, eine Familie und ein Ort, an dem jeder willkommen ist. Wir haben uns von der japanischen Kultur inspirieren lassen, mit ihrer Ruhe, Schönheit und Harmonie. Unsere Welt ist geprägt von leuchtenden Kirschblüten, friedlichen Tori-Toren und einer Atmosphäre, die euch zum Staunen einlädt.</p>
+    
+        <p>Unsere Mission ist es, euch nicht nur ein Spielerlebnis, sondern ein Gefühl zu geben – das Gefühl, Teil von etwas Besonderem zu sein. Hier könnt ihr bauen, kämpfen, entdecken und wachsen. Aber vor allem möchten wir, dass ihr euch gehört, geschätzt und als Teil einer Gemeinschaft fühlt, die sich gegenseitig unterstützt.</p>
+    
+        <p>YukiCraft ist unser Beweis dafür, dass aus den dunkelsten Momenten etwas Wunderbares entstehen kann. Jeder von uns trägt seine eigene Geschichte, seine eigenen Träume und Wünsche bei. Gemeinsam haben wir einen Ort geschaffen, an dem all das seinen Platz findet. Wir glauben daran, dass jeder Mensch gehört werden sollte, dass jede Idee zählt und dass jede Stimme wichtig ist.</p>
+    
+        <p>Wir laden euch ein, Teil dieser Reise zu sein. Teil eines Traums, der aus Rückschlägen entstanden ist und nun stärker ist als je zuvor. YukiCraft ist nicht nur unser Traum – es ist euer Traum. Gemeinsam können wir eine Welt erschaffen, die zeigt, wie stark Freundschaft, Kreativität und ein gemeinsames Ziel sein können.</p>
+    
+        <p>Danke, dass ihr hier seid. Danke, dass ihr an uns glaubt. Willkommen bei YukiCraft – einem Ort, der für alle da ist, die nach einem Zuhause suchen.</p>
+    </section>
+    
+
+<!-- Scroll-to-Top Button -->
+<div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+    <div class="arrow-container">
+        <span>&#x2191;</span>
+    </div>
+</div>
+
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 YukiCraft. Alle Rechte vorbehalten. | <a></a></p>
+            <p><a href="https://discord.gg/h7m5a9fqbf" target="_blank">Tritt unserem Discord bei</a></p>
+        </div>
+    </footer>
+
+    <style>
+        footer {
+            background-color: #121212;
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .footer-content p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .footer-content a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .footer-content a:hover {
+            color: var(--main-color);
+        }
+    </style>
+<style>
+    :root {
+        --japan-red: #D72638;
+        --gold: #FFC857;
+        --deep-black: #1E1E1E;
+        --soft-white: #F5F5F5;
+    }
+
+    .scroll-to-top {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        background: radial-gradient(circle, var(--gold) 40%, var(--japan-red) 90%);
+        border: 2px solid var(--gold);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.8) translateY(30px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), 0 0 7px var(--gold);
+        transition: all 0.4s ease-out, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        z-index: 1000;
+    }
+
+    .scroll-to-top .arrow-container {
+        animation: floatArrow 2s infinite ease-in-out;
+        position: relative;
+        font-size: 1.5rem;
+        color: var(--soft-white);
+        text-shadow: 0px 0px 5px var(--soft-white), 0px 0px 10px var(--gold);
+    }
+
+    .scroll-to-top.show {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1) translateY(0);
+    }
+
+    .scroll-to-top:hover {
+        background: radial-gradient(circle, var(--japan-red), var(--gold));
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8), 0 0 12px var(--gold), inset 0 0 5px var(--soft-white);
+    }
+
+    @keyframes floatArrow {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-6px);
+        }
+    }
+</style>
+<script>
+    // Scroll-to-Top Button Referenz
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+
+    // Event zum Einblenden des Buttons
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add("show");
+        } else {
+            scrollToTopBtn.classList.remove("show");
+        }
+    });
+
+    // Funktion für sanftes Scrollen nach oben
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+</script>
+
+<style>
+    /* Reduziere Parallax-Effekt und Größe des Banners auf mobilen Geräten */
+    @media only screen and (max-width: 768px) {
+        .parallax {
+            background-attachment: scroll; /* Deaktiviert den Parallax-Effekt */
+            height: 250px; /* Reduziert die Höhe */
+            opacity: 1; /* Entfernt die Opazität */
+        }
+
+        .logo {
+            width: 50%; /* Skaliert das Logo proportional */
+            animation: none; /* Entfernt den Zoom-Effekt */
+        }
+
+        section h2 {
+            font-size: 2rem; /* Kleinere Schrift für h2 */
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1rem; /* Kleinere Schrift für Text */
+            line-height: 1.5;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .button {
+            font-size: 1rem; /* Kleinere Schaltflächen */
+            padding: 0.8rem 2.5rem;
+        }
+
+        /* Navigation für mobile Ansicht */
+        nav {
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        nav a {
+            margin: 8px 0;
+            font-size: 1rem;
+        }
+
+        nav .menu-icon {
+            display: block;
+        }
+
+        nav.open a {
+            display: block;
+        }
+
+        /* Galerie-Bilder anpassen */
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    /* Allgemeine Anpassungen für mobile Endgeräte */
+    @media only screen and (max-width: 480px) {
+        section h2 {
+            font-size: 1.8rem; /* Noch kleinere Schrift für kleinere Geräte */
+        }
+
+        section p {
+            font-size: 0.9rem;
+        }
+
+        .button {
+            font-size: 1rem;
+            padding: 0.7rem 2rem;
+        }
+
+        .footer-content p {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+<script>
+
+ document.addEventListener('contextmenu', function(e) {
+    e.preventDefault(); // Verhindert das Rechtsklick-Menü
+});
+
+document.addEventListener('selectstart', function(e) {
+    e.preventDefault(); // Verhindert das Markieren von Text
+});
+
+</script>
+    <script>
+        // Particles.js initialisieren
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 120, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: false },
+                move: { enable: true, speed: 3, direction: "random", out_mode: "out" }
+            },
+            interactivity: {
+                detect_on: "window",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" }
+                }
+            },
+            retina_detect: true
+        });
+
+        // ScrollReveal Initialisierung
+        const sr = ScrollReveal({ reset: true });
+        sr.reveal('section h2', { duration: 1000, origin: 'bottom', distance: '50px' });
+        sr.reveal('section p', { duration: 1200, origin: 'bottom', distance: '50px' });
+
+        // Mobile Navigation Toggle
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

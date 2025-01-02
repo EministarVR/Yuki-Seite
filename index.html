@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="YukiCraft ist ein Minecraft-Server, der CityBuild, SMP, Minigames und viele weitere spannende Spielmodi bietet. Tritt unserer Community bei und erlebe eine japanisch inspirierte Welt!">
+    <meta name="keywords" content="Minecraft, YukiCraft, CityBuild, SMP, Minigames, Server, Minecraft Server, Japan, Community, YukiCraft Server, YukiCraft CityBuild, YukiCraft Minigames, YukiCraft Survival, YukiCraft RPG, YukiCraft PvP, AquaBuild, AquaCraft, AquaSMP, AquaSurvival, AquaMinigames, AquaCraft Server, JapanCraft, YukiSMP, YukiMinigames, YukiPvP, YukiBuild, YukiRPG, YukiCraft Japan, YukiCraft Server Deutschland, YukiCraft Multiplayer, YukiCraft Abenteuer, YukiCraft Roleplay, YukiCraft Events, YukiCraft Welt, YukiCraft Community, YukiCraft Server 2024, YukiCraft Minecraft, YukiCraft Online, YukiCraft Minecraft Server, YukiCraft Spielen, YukiCraft Welten, YukiCraft Spieler, YukiCraft Support, YukiCraft Bauen, YukiCraft Server IP, YukiCraft Server Einladungen, Minecraft Server YukiCraft, Minecraft Server Japan, YukiCraft Stadt, Japanische Minecraft Welt, Japanische Minecraft Server, Japanisch Minecraft, YukiCraft Weltentdeckung, Minecraft Server für Freunde, YukiCraft Events, YukiCraft Gemeinschaft, YukiCraft Minigames, YukiCraft survival Minecraft, YukiCraft RPG Minecraft, Minecraft Minigames Japan, CityBuild Japan, CityBuild Minecraft, CityBuild Server, CityBuild Community, CityBuild Minigames, CityBuild Abenteuer, CityBuild Minecraft Deutschland, Minigames Server, Minigames Minecraft, Minigames RPG, Minigames PvP, Minigames Japan, Minecraft PvP Server, Minecraft RPG Server, Minecraft Adventure Server, Minecraft Survival Server, Minecraft Abenteuer Server, Minecraft Japan Server, Minecraft Stadt Server, Minecraft Baumodus, YukiCraft Baumodus, YukiCraft Abenteuer Server, YukiCraft Minigames Server, YukiCraft CityBuild Server, AquaCraft Minigames, AquaCraft Abenteuer, AquaCraft CityBuild, Minecraft AquaCraft, AquaCraft Survival, AquaCraft Roleplay, AquaCraft Japan, AquaCraft Build, AquaCraft PvP, AquaCraft Minigames Minecraft, Minecraft RPG YukiCraft, Minecraft Build YukiCraft, Minecraft PvP YukiCraft, YukiCraft Events 2024, YukiCraft Spielerfahrung, YukiCraft Server Abenteuer, Minecraft Japan CityBuild, YukiCraft PvP Server, AquaCraft PvP, AquaCraft CityBuild Server, YukiCraft Japan CityBuild">
+    <meta name="author" content="YukiCraft Team">
+    <meta property="og:title" content="YukiCraft - Dein Minecraft-Server">
+    <meta property="og:description" content="Erlebe YukiCraft, einen Minecraft-Server mit CityBuild, Minigames und mehr in einer japanisch inspirierten Welt. Tritt unserer Community bei!">
+    <meta property="og:image" content="logo.webp">
+    <meta property="og:url" content="https://yukicraft.net">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="YukiCraft - Japanisch inspiriert">
+    <meta name="twitter:description" content="Erlebe YukiCraft, einen Minecraft-Server mit CityBuild, Minigames und mehr in einer japanisch inspirierten Welt. Tritt unserer Community bei!">
+    <meta name="twitter:image" content="logo.webp">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <title>YukiCraft - Startseite</title>
+
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- ScrollReveal.js für Animationen -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        :root {
+            --main-color: #FF6F61;
+            --secondary-color: #F5F5F5;
+            --accent-color: #F6A800;
+            --background-color: #121212;
+            --text-color: #fff;
+            --transition-time: 0.6s;
+            --box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.7);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: 'Arial', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            scroll-behavior: smooth;
+        }
+
+        /* Fixe Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 100;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: var(--box-shadow);
+            transition: background-color 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        nav a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color var(--transition-time), transform var(--transition-time);
+        }
+
+        nav a:hover {
+            color: var(--main-color);
+            transform: scale(1.1);
+        }
+
+        nav .menu-icon {
+            display: none;
+            font-size: 2rem;
+            color: var(--accent-color);
+            cursor: pointer;
+        }
+
+        /* Partikel-Effekte */
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        section {
+            padding: 80px 0; /* Sektionen näher zusammenrücken */
+            text-align: center;
+            height: auto; /* Höhe für flexible Sektionen */
+            position: relative;
+        }
+
+        section h2 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--main-color);
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        section p {
+            font-size: 1.3rem;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-family: 'Noto Sans JP', sans-serif;
+            color: var(--text-color);
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s 0.5s ease-out forwards;
+        }
+
+        .team-member p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+        section .button {
+            background-color: transparent;
+            border: 2px solid var(--accent-color);
+            color: var(--accent-color);
+            font-size: 1.2rem;
+            padding: 1rem 3rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s, color 0.3s;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s 1s ease-out forwards;
+        }
+
+        section .button:hover {
+            background-color: var(--accent-color);
+            color: var(--background-color);
+        }
+
+        section .button:active {
+            background-color: var(--main-color);
+            color: white;
+        }
+
+        /* Logo Unendlicher Zoom */
+        .logo {
+            width: 200px;
+            height: auto;
+            animation: smoothZoom 3s infinite linear;
+            margin-top: 40px;
+        }
+
+        @keyframes smoothZoom {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.3);
+            }
+        }
+
+        /* Parallax Effekt */
+        .parallax {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('banner.webp');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        /* Scroll Animation */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Galerie */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .gallery img {
+            width: 128px;
+            height: 256px;
+            object-fit: cover;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery img:active {
+            transform: scale(0.95);
+        }
+
+        /* Discord Online API Bereich */
+        .discord-status {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 40px;
+            color: var(--text-color);
+        }
+
+        .discord-status img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .discord-status .status-info {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+
+        /* Mobile Optimierung */
+        @media only screen and (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                padding: 1rem;
+            }
+
+            nav a {
+                margin: 8px 0;
+                display: none;
+                font-size: 1rem;
+            }
+
+            nav .menu-icon {
+                display: block;
+            }
+
+            nav.open a {
+                display: block;
+            }
+
+            section h2 {
+                font-size: 2.2rem;
+            }
+
+            section p {
+                font-size: 1.1rem;
+            }
+
+            .button {
+                font-size: 1.1rem;
+                padding: 0.8rem 2.5rem;
+            }
+
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Particles -->
+    <div id="particles-js"></div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="about.html">Über uns</a>
+        <a href="#contact">Kontakt</a>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    </nav>
+
+    <section id="home">
+        <div class="parallax"></div>
+        <img src="logo.webp" alt="YukiCraft Logo" class="logo">
+        <h2>Willkommen auf YukiCraft!</h2>
+        <p>Erlebe einen Minecraft-Server im japanischen Stil – baue, spiele und erkunde die faszinierende Welt von Kirschblüten und Tori-Toren.</p>
+        <button class="button" onclick="copyIP()">Jetzt Spielen</button>
+    </section>
+    
+<!-- Popup für Erfolgreiche Kopie -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <div class="popup-animation">
+            <div class="glow-circle"></div>
+            <div class="particles"></div>
+        </div>
+        <p>IP erfolgreich kopiert!</p>
+        <button class="popup-close" onclick="closePopup()">Schließen</button>
+    </div>
+</div>
+
+
+    <style>
+ /* Popup Style */
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(15px);
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInBackground 0.8s ease-in-out;
+}
+
+.popup-content {
+    position: relative;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 60px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(255, 255, 255, 0.25);
+    overflow: hidden;
+    animation: slideUpPopup 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.popup-animation {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 30px;
+    animation: pulseEffect 3s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glow-circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(rgba(138, 43, 226, 0.6), rgba(255, 20, 147, 0.8));
+    filter: blur(12px);
+    animation: rotateCircle 4s linear infinite;
+}
+
+.particles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    animation: floatParticles 6s ease-in-out infinite;
+    filter: blur(10px);
+    opacity: 0.7;
+}
+
+.popup-content p {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+    z-index: 2;
+    position: relative;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+    animation: fadeInText 1.2s ease-in-out forwards;
+}
+
+.popup-close {
+    background: linear-gradient(135deg, #ff1493, #8a2be2);
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(255, 20, 147, 0.5);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
+    position: relative;
+}
+
+.popup-close:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 40px rgba(255, 20, 147, 0.7);
+}
+
+/* Animation für das Schließen */
+.popup.closing {
+    animation: slideDownPopup 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards, fadeOutBackground 0.6s ease-in-out forwards;
+}
+
+@keyframes slideDownPopup {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+}
+
+@keyframes fadeOutBackground {
+    from {
+        background: rgba(0, 0, 0, 0.85);
+    }
+    to {
+        background: rgba(0, 0, 0, 0);
+    }
+}
+
+
+/* Animationen */
+@keyframes fadeInBackground {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUpPopup {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateCircle {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes floatParticles {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.15);
+    }
+}
+
+@keyframes pulseEffect {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.25);
+        opacity: 0.8;
+    }
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    </style>
+    <script>
+function closePopup() {
+    const popup = document.getElementById("popup");
+    popup.classList.add("closing");
+    setTimeout(() => {
+        popup.style.display = "none";
+        popup.classList.remove("closing");
+    }, 600); // Zeit, die der Animation entspricht
+}
+
+    </script>
+    <script>
+        function copyIP() {
+            const ip = 'yukicraft.net';
+            // IP in die Zwischenablage kopieren
+            navigator.clipboard.writeText(ip).then(() => {
+                // Popup anzeigen
+                document.getElementById("popup").style.display = "flex";
+            }).catch(err => {
+                console.error("Fehler beim Kopieren der IP: ", err);
+            });
+        }
+    
+        function closePopup() {
+            document.getElementById("popup").style.display = "none";
+        }
+    </script>
+
+    <section id="features">
+        <h2>Unsere Features</h2>
+        <p>Erlebe einzigartige Features, die dir das Gefühl geben, Teil einer lebendigen, japanischen Welt zu sein. Schlage dich durch mystische Wälder, baue eigene Dörfer und kämpfe in epischen Schlachten!</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Unser HighTeam</h2>
+        <p>Schau dir einige Teamer von YukiCraft an!</p>
+        <div class="gallery">
+            <div class="team-member">
+                <img src="bild5.webp" alt="Axel" onclick="window.open('https://www.twitch.tv/axe1ll_', '_blank')">
+                <p>Axel - Owner</p>
+            </div>
+            <div class="team-member">
+                <img src="bild6.webp" alt="Joel" onclick="window.open('https://www.instagram.com/j0el37?igsh=MWdvZzZ5eXlhd2sydA%3D%3D&utm_source=qr', '_blank')">
+                <p>Joel - Teamleitung</p>
+            </div>
+            <div class="team-member">
+                <img src="bild7.webp" alt="EministarVR" onclick="window.open('https://eministar.netlify.app', '_blank')">
+                <p>EministarVR - Developer</p>
+            </div>
+            <div class="team-member">
+                <img src="bild8.webp" alt="1oel" onclick="window.open('bild8.webp', '_blank')">
+                <p>1oel - Admin</p>
+            </div>
+            <div class="team-member">
+                <img src="bild9.webp" alt="Vinomir" onclick="window.open('bild9.webp', '_blank')">
+                <p>Vinomir - Admin</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about">
+        <h2>Über YukiCraft</h2>
+        <p>YukiCraft ist ein einzigartiger Minecraft-Server mit CityBuild, Minigames und mehr in einer japanisch inspirierten Welt. Baue, kämpfe und erlebe spannende Abenteuer!</p>
+        <button class="button" onclick="window.location.href='about.html'">Mehr Erfahren</button>
+    </section>
+
+    <section id="contact">
+        <h2>Kontaktiere uns</h2>
+        <p>Hast du Fragen oder möchtest du mehr über uns erfahren? Kontaktiere uns direkt, wir freuen uns auf deine Nachricht!</p>
+        <button class="button" onclick="window.location.href='mailto:netzwerk@yukicraft.net'">E-Mail senden</button>
+    </section>
+
+<!-- Scroll-to-Top Button -->
+<div id="scrollToTop" class="scroll-to-top" onclick="scrollToTop()">
+    <div class="arrow-container">
+        <span>&#x2191;</span>
+    </div>
+</div>
+
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 YukiCraft. Alle Rechte vorbehalten. | <a></a></p>
+            <p><a href="https://discord.gg/h7m5a9fqbf" target="_blank">Tritt unserem Discord bei</a></p>
+        </div>
+    </footer>
+
+    <style>
+        footer {
+            background-color: #121212;
+            color: var(--text-color);
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            box-shadow: var(--box-shadow);
+        }
+
+        .footer-content p {
+            margin: 10px 0;
+            font-size: 1rem;
+        }
+
+        .footer-content a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .footer-content a:hover {
+            color: var(--main-color);
+        }
+    </style>
+<style>
+    :root {
+        --japan-red: #D72638;
+        --gold: #FFC857;
+        --deep-black: #1E1E1E;
+        --soft-white: #F5F5F5;
+    }
+
+    .scroll-to-top {
+        position: fixed;
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        background: radial-gradient(circle, var(--gold) 40%, var(--japan-red) 90%);
+        border: 2px solid var(--gold);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0.8) translateY(30px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5), 0 0 7px var(--gold);
+        transition: all 0.4s ease-out, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        z-index: 1000;
+    }
+
+    .scroll-to-top .arrow-container {
+        animation: floatArrow 2s infinite ease-in-out;
+        position: relative;
+        font-size: 1.5rem;
+        color: var(--soft-white);
+        text-shadow: 0px 0px 5px var(--soft-white), 0px 0px 10px var(--gold);
+    }
+
+    .scroll-to-top.show {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1) translateY(0);
+    }
+
+    .scroll-to-top:hover {
+        background: radial-gradient(circle, var(--japan-red), var(--gold));
+        transform: scale(1.1);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8), 0 0 12px var(--gold), inset 0 0 5px var(--soft-white);
+    }
+
+    @keyframes floatArrow {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-6px);
+        }
+    }
+</style>
+<script>
+    // Scroll-to-Top Button Referenz
+    const scrollToTopBtn = document.getElementById("scrollToTop");
+
+    // Event zum Einblenden des Buttons
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            scrollToTopBtn.classList.add("show");
+        } else {
+            scrollToTopBtn.classList.remove("show");
+        }
+    });
+
+    // Funktion für sanftes Scrollen nach oben
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    }
+</script>
+
+<style>
+    /* Reduziere Parallax-Effekt und Größe des Banners auf mobilen Geräten */
+    @media only screen and (max-width: 768px) {
+        .parallax {
+            background-attachment: scroll; /* Deaktiviert den Parallax-Effekt */
+            height: 250px; /* Reduziert die Höhe */
+            opacity: 1; /* Entfernt die Opazität */
+        }
+
+        .logo {
+            width: 50%; /* Skaliert das Logo proportional */
+            animation: none; /* Entfernt den Zoom-Effekt */
+        }
+
+        section h2 {
+            font-size: 2rem; /* Kleinere Schrift für h2 */
+            margin-bottom: 10px;
+        }
+
+        section p {
+            font-size: 1rem; /* Kleinere Schrift für Text */
+            line-height: 1.5;
+            max-width: 90%;
+            margin: 0 auto;
+        }
+
+        .button {
+            font-size: 1rem; /* Kleinere Schaltflächen */
+            padding: 0.8rem 2.5rem;
+        }
+
+        /* Navigation für mobile Ansicht */
+        nav {
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        nav a {
+            margin: 8px 0;
+            font-size: 1rem;
+        }
+
+        nav .menu-icon {
+            display: block;
+        }
+
+        nav.open a {
+            display: block;
+        }
+
+        /* Galerie-Bilder anpassen */
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    /* Allgemeine Anpassungen für mobile Endgeräte */
+    @media only screen and (max-width: 480px) {
+        section h2 {
+            font-size: 1.8rem; /* Noch kleinere Schrift für kleinere Geräte */
+        }
+
+        section p {
+            font-size: 0.9rem;
+        }
+
+        .button {
+            font-size: 1rem;
+            padding: 0.7rem 2rem;
+        }
+
+        .footer-content p {
+            font-size: 0.9rem;
+        }
+    }
+</style>
+
+<script>
+
+ document.addEventListener('contextmenu', function(e) {
+    e.preventDefault(); // Verhindert das Rechtsklick-Menü
+});
+
+document.addEventListener('selectstart', function(e) {
+    e.preventDefault(); // Verhindert das Markieren von Text
+});
+
+</script>
+    <script>
+        // Particles.js initialisieren
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 120, density: { enable: true, value_area: 800 } },
+                color: { value: "#ffffff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: { enable: false },
+                move: { enable: true, speed: 3, direction: "random", out_mode: "out" }
+            },
+            interactivity: {
+                detect_on: "window",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" }
+                }
+            },
+            retina_detect: true
+        });
+
+        // ScrollReveal Initialisierung
+        const sr = ScrollReveal({ reset: true });
+        sr.reveal('section h2', { duration: 1000, origin: 'bottom', distance: '50px' });
+        sr.reveal('section p', { duration: 1200, origin: 'bottom', distance: '50px' });
+
+        // Mobile Navigation Toggle
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
